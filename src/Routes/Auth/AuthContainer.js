@@ -18,7 +18,6 @@ export default () => {
   const secret = useInput("");
   const email = useInput("");
   const [requestSecretMutation] = useMutation(LOG_IN, {
-    update:(_,{data}) => console.log(data),
     variables: { email: email.value }
   });   
   const [createAccountMutation] = useMutation(CREATE_ACCOUNT, {
